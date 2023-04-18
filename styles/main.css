@@ -1,7 +1,7 @@
 /* COLOR VARIABLES*/
 :root {
-  --header-bg-color: #0d47a1;
-  --header-ft-color: #fff;
+  --header-bg-color: #fff;
+  --header-ft-color: #0d47a1;
   --highlight-light: #5e92f3;
   --highlight-dark: #003c8f;
   --accent-dim: #e0e0e0;
@@ -303,4 +303,12 @@ pre {
   margin-top: 15px;
   box-shadow: var(--card-box-shadow);
   max-width: 700px;
+}
+
+.navbar-header svg {
+  height: 50px;
+}
+
+.navbar-header img {
+  height: 50px;
 }

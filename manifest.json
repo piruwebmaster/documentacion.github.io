@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/Admin/OneDrive/Documentos/GitHub/material/docs",
+  "source_base_path": "C:/Users/Admin/OneDrive/Documentos/GitHub/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -13,12 +13,480 @@
       "is_incremental": false
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "CHANGELOG.md",
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Acceso.Usuario.AccesoUsuarioController.yml",
       "output": {
         ".html": {
-          "relative_path": "CHANGELOG.html",
-          "hash": "PkchYhhAb3nzePYv/39996ClzKxLmEzGJL2MSga5dJA="
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Acceso.Usuario.AccesoUsuarioController.html",
+          "hash": "OZrVFH99vZwTiW20GdsWxQWi+9CIT48fTFNAKanhvLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Acceso.Usuario.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Acceso.Usuario.html",
+          "hash": "ZU4WI8DsMNHwdCryS9CnOU4/9hVA52fxyzGypIjj/mA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.AplicacionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.AplicacionController.html",
+          "hash": "dvkSYYOxjrj1K0dGOAdFVwbLbargt/OOtQzT3xE3Yx0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.ParametroController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.ParametroController.html",
+          "hash": "bG7ps6uFINW7NPS2aCcLECZI73iBO/SDCB+QK6Pnldw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Aplicacion.html",
+          "hash": "MZtmmvmWGNtE7vQHWghMzYSuzWny3Wi0YE0zHHCTPB0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cliente.ClienteController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cliente.ClienteController.html",
+          "hash": "7OZCEuwonUlb5aMouvOHob10ZVyhnho/RPfyKAZisrg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cliente.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cliente.html",
+          "hash": "r1eDB60xOF8Y22k9JcbQ/aJ/qdnZyfYUpJCVPmXdR1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cotizador.CotizadorController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cotizador.CotizadorController.html",
+          "hash": "KaHaq2uaeA3HtrtQr9YPj3Ou19rHZhyeY0CL1ROzPpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cotizador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Cotizador.html",
+          "hash": "rRMl6n2OX6VfAlp+iW3eYzy/npOMY/5SXOYXZbAcNrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Poliza.PolizaController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Poliza.PolizaController.html",
+          "hash": "tyC5Gv0JkAz7lDLi3o5XiDhrIDem6L07SAh1RepR+Q4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Poliza.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Poliza.html",
+          "hash": "LXP+SwCcyXpG7SQTAJb3wSz6H5F+JMzPL3mER/3ctBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Procesar.ProcesarController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Procesar.ProcesarController.html",
+          "hash": "8gTIg192udh2hMV8pRxoyge0Rq6YTd1e+OguuTymINk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Procesar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Procesar.html",
+          "hash": "+r4qR/bE3W6ENVNy2xJd1XR2QM9hgKbomoZIOhoPAQs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.ProductoController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.ProductoController.html",
+          "hash": "+jT9FPARTGxTuNKlFlr7QoN012fnEXnqSr99BWJ69eo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.ValidacionMetodoPlanProdController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.ValidacionMetodoPlanProdController.html",
+          "hash": "lLXwoIbhVCLdV7UOaLeRpn8maCVj5q7DMVUMhHmTT38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Producto.html",
+          "hash": "nDegx7+0J8CFKn0XAKvo5E9u4CMVlouu07Ll5gq5Xmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Ramo.RamoController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Ramo.RamoController.html",
+          "hash": "J274i6qNPxgwaFDo95btS4xzTDTppvyi8j3904iDMeU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Ramo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Ramo.html",
+          "hash": "8P3LHMdg7xEwgLnNRPx8S/HlVWdC3Lsni9DKhVmf194="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Reaseguro.ReaseguroController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Reaseguro.ReaseguroController.html",
+          "hash": "1WhepvkFNTMGwRxwY+0QhIuXrnNzH5TxezUVpXW2ZsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Reaseguro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Reaseguro.html",
+          "hash": "o6egVlhOOGtKwdDcxN38m/gx9HN8hRwAHsScxkQ0XWQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Renovacion.RenovacionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Renovacion.RenovacionController.html",
+          "hash": "POrgRf7ScGMOxENgt5xENDLqdFGGgsCmiGAtsdHjb38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Renovacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Renovacion.html",
+          "hash": "8QIfb5CYIloEK8fqbfeXH9VS0ZASkR72hhV4jgXZO9E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Siniestro.SiniestroController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Siniestro.SiniestroController.html",
+          "hash": "F7KeROevKS/nE/gUiWj8DHjgC3tEWIHZ61EUPhKRAa8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Siniestro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel1.Configuracion.Siniestro.html",
+          "hash": "VgG27zUx0ioyiUf2rEbWMvGjD5WkmoeCfT5rTl+aTag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel2.Transaccion.Ramo.ProcesoRamoController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel2.Transaccion.Ramo.ProcesoRamoController.html",
+          "hash": "PUXopO2TrsTEHdtsml4K5A/C4YDVsHtLrU1KcL84tEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel2.Transaccion.Ramo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel2.Transaccion.Ramo.html",
+          "hash": "Eg2WopL1tXHy+xA4kcOXNLYxzn9znXDJrpqeQV6q//I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Confirmacion.ConfirmacionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Confirmacion.ConfirmacionController.html",
+          "hash": "4tJkFBXTLUxNN/k6D9lY08nbJ/pk/a5blhWtFd2poBM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Confirmacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Confirmacion.html",
+          "hash": "XhoODNKmv91WI9HdyRe04CcycynA/R8VDqf6RWwd1AQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Dashboard.Cotizacion.DashboardCotizacionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Dashboard.Cotizacion.DashboardCotizacionController.html",
+          "hash": "F90xcuoli4ZhrCIH4zCDD401VmcVt/eiRkTTVpQC2iM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Dashboard.Cotizacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Dashboard.Cotizacion.html",
+          "hash": "GLemHlwpJQniziCUOF2qHTYdUoV530BeHcd65e77QRA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Reporte.Cotizacion.CotizacionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Reporte.Cotizacion.CotizacionController.html",
+          "hash": "4zucp6uscHEYyqP7mSPN/x6piz/HVsDwei99bfIVtfk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Reporte.Cotizacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Nivel3.Reporte.Cotizacion.html",
+          "hash": "taj0MIh/wiDvNCWEaYxaInKQ48eixa1t/MxOdEbz8NE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Shared.ControladorBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Shared.ControladorBase.html",
+          "hash": "qzffiH4YJ4oWg2tXLV8YqcOEvCIKRzwu4xOU8TWyLo0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Controllers.Shared.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Controllers.Shared.html",
+          "hash": "gAKxQMWAP9Z5WvPP4NWzML0yDlKofVXA8pA2i5zgiJk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Middleware.ExceptionFilterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Middleware.ExceptionFilterMiddleware.html",
+          "hash": "f/amStrpz6x3ojzRlQMpJJz88F9BM7PyqYDoF3cllK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Middleware.RequestRecordMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Middleware.RequestRecordMiddleware.html",
+          "hash": "ejn54vq+OF22yMcozbYkgxB3B1OKzDq9hDPYoVPULh0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Middleware.html",
+          "hash": "Zwz2RJtkxjctyRRQKbydOUsqp/Rc5WEtqwdD5T/nYkA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Program.html",
+          "hash": "8rS4isSDcpkVN4nfUABIfGaiWeKstdz8CbxBmojHK/E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.Startup.html",
+          "hash": "nGnG6UaKEFdBcUEE+OR87+z3JO/J5x5mQNRYvJC75F4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Universal.CoreSeguros.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Universal.CoreSeguros.API.html",
+          "hash": "twUausPVGzpwCy26nz5u/wGNuetibR17Woi4h0tj9XI="
         }
       },
       "is_incremental": false,
@@ -30,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "qlVXUK6+cWd0dKr6SQdt0D4EFGrezsli7/fIbTwTePI="
+          "hash": "SpDi1bF+dA5QD0A5vQBRdcyvMvM9IjAZC8cfBRr9tns="
         }
       },
       "is_incremental": false,
@@ -42,31 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "fG/DTDyytpxV9rnHllrdTnUEI6bw0xBip/eWegtEKEI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/content2.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/content2.html",
-          "hash": "2Nh1yNt4n0WAod7tCAqZHWhqUeicoB7hWrKjg6uXkyY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/content3.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/content3.html",
-          "hash": "G9x3InshAnmPA0fddUsQ6vp6kNBYpGp06s2N7JOPEjA="
+          "hash": "ri5cogwvFGxvUAoV7So8Yyv7xwhlZlI0r55PEk43G0E="
         }
       },
       "is_incremental": false,
@@ -78,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "w2x20HCRNOu/xKpJrgED74oeuaYah0Hg/CG2tlVQ0YY="
+          "hash": "xpnEpMJF6aAvbPqQlFazeiB9Qe/oOyO/adzB1epr7AI="
         }
       },
       "is_incremental": false,
@@ -90,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "NOe8VIuedV3ZclLtHgzRQt58ue+ECtqny5ob4DHDV5c="
+          "hash": "iQHQnUfNNRAXplIICF44iwxbNaOX2x5LebOHRI2leYc="
         }
       },
       "is_incremental": false,
@@ -98,10 +542,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/index/docfx-filter.gif",
+      "source_relative_path": "favicon.ico",
       "output": {
         "resource": {
-          "relative_path": "images/index/docfx-filter.gif"
+          "relative_path": "favicon.ico"
         }
       },
       "is_incremental": false,
@@ -109,21 +553,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/index/docfx-screenshot.png",
+      "source_relative_path": "images/deerviewlogo.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/index/docfx-screenshot.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/index/docfx-search.gif",
-      "output": {
-        "resource": {
-          "relative_path": "images/index/docfx-search.gif"
+          "relative_path": "images/deerviewlogo.jpg"
         }
       },
       "is_incremental": false,
@@ -135,7 +568,18 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "JGRipevFdfcb/oTdhGLC50mZnIqJ4+Mf9wySzBP6+90="
+          "hash": "aQ1+WietlpOn0QLskthLIy8BiIBkp6xLpgvVWGtqmP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
         }
       },
       "is_incremental": false,
@@ -147,7 +591,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "IrLZtxYGlkTK6tOW1sV2KksNYIdEJCD+Jko0K8etX60="
+          "hash": "jv3lvVCsZ09+Ocu2mmegsJts+5iGnEfTNfL/5FZTVqI="
         }
       },
       "is_incremental": false,
@@ -157,17 +601,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 6
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 40,
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

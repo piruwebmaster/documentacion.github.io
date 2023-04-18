@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Fallere antiquam thyrso visceribus | DocFX Material </title>
+    <title>Introducci&#243;n | Documentacion de integraci&#243;n </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Fallere antiquam thyrso visceribus | DocFX Material ">
+    <meta name="title" content="Introducci&#243;n | Documentacion de integraci&#243;n ">
     <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,90 +77,781 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="fallere-antiquam-thyrso-visceribus">Fallere antiquam thyrso visceribus</h1>
+<h1 id="introducción">Introducción</h1>
 
-<h2 id="si-mandate-videt">Si mandate videt</h2>
-<p>Lorem markdownum perspice caelestia orsa tamen rorant titulum Amycus parens
-deplangitur <a href="http://ultorem-hunc.net/exstantequos">fuit est</a>; duxit cura est.
-Idem <a href="http://est.io/">praepetibus sibi</a> ligatis umidus Minervae si auras
-vultuque, magni venabula ferarum manibus occasus!</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a note which needs your attention, but it's not super important.</p>
-</div>
-<p>In paucis, venis sed una Volturnus auras veloxque feratis successit licet. Oras
-Nestor hoc nymphae belua. Barba potes Cinyras Liternum undis hac, hunc, nec
-coniuge tegens, latus foedantem dea, <strong>reduxi opes</strong> vivitur? Et priorum ante
-signaque <strong>vulnere</strong> vivacemque milia, pennas qui non vulnere locis. Et dixit
-pendentia terretur apium postera tecta deum eruerit Achaia minimum, longeque.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>This is a warning containing some important message.</p>
-</div>
-<p>Orbem ore est, miserabilis promissae inquit <strong>profugos</strong>, falsae aconiton
-nullae; dique simul. Eris deum cepit furoris nympha. Dies iste telae cum
-fidelius, mihi esse est nominat quod, Anaxareten. Venit Confremuere, inplet,
-tibi inspiciunt iamque maesta his suis.</p>
-<div class="CAUTION">
-<h5>Caution</h5>
-<p>This is a warning containing some <strong>very</strong> important message.</p>
-</div>
-<pre><code>serverBitStatus(jsp_data - memory, read(5 + desktopCharacterProgram,
-        address_drive));
-virusVrmlIpv.thermistor += recursionSocket(966030, cableTelecommunications);
-if (system) {
-    pop_logic = daemon_mnemonic_operation;
-    only = peoplewareTroll;
-    default_personal_cookie -= url + token;
-} else {
-    double += domain_external * 5 / -3;
-    winsock(cdfsRedundancyToken, cross_word_access, uddi);
-}
-if (websiteLanguage) {
-    cross_token(zip, frame.mbr(4));
-    golden.backsideOsMenu += serp;
-    whiteRestore.videoDimmOpen += mountPlain * 15;
-} else {
-    spool.irc = play_suffix;
-    cmos += 96;
-    artUpImpact.leafWebmasterHorse = domainBrowser;
+<p>La presente documentación hace referencia al conjunto de Endpoint disponibles en los procesos de operaciones sobre Pólizas que van desde la Cotización hasta la Cancelación para ser consumidos por aplicaciones Externas.
+Los endpoint relacionados con las cotizaciones y pólizas basan su funcionalidad y operatividad en la configuración de los productos de Seguros Universal bajo las especificaciones de un motor de tarifa dinámico para la resolución de los valores y cálculos de las coberturas por producto y planes. Dicho motor de tarifa centra su estructura en una definición de datos particulares por productos y planes llamados (Métodos y Componentes). Los “Métodos” viene a ser los Datos (Campos o Informaciones de Pólizas, Asegurados y Bienes) que se defines según la naturaleza de un Producto. Los posibles valores de un Método se conocen como “Componentes” (Valores de Métodos).</p>
+<h2 id="consulta-de-métodos-datos-particulares-de-objetos-asegurados-por-producto-plan">Consulta de Métodos (Datos Particulares de Objetos Asegurados) por Producto Plan.</h2>
+<h3 id="descripción">Descripción</h3>
+<p>Para conocer las propiedades (Métodos) que deben de ser enviadas al momento de crear una propuesta; se utiliza el endpoint <strong><em>{{baseUrl}}/api/Cotizador/GetDatosParticularesPropuestaConf?CodProd={{codprod}}&amp;CodPlan={{codplan}}&amp;RevPlan={{revplan}}</em></strong> de tipo <code>GET</code>,</p>
+<p>Este endpoint entrega la configuración del plan consultado indicando cuales son los métodos existentes, el tipo de método, si son o no obligatorios y en caso de ser de tipo lista las opciones validas y disponibles.</p>
+<h3 id="ejemplo-de-entrada">Ejemplo de entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codprod</td>
+<td>A-EE</td>
+</tr>
+<tr>
+<td>codplan</td>
+<td>001</td>
+</tr>
+<tr>
+<td>revplan</td>
+<td>001</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-respuesta">Ejemplo de Respuesta</h3>
+<p>El la siguiente respuesta muestra la existencia de dos métodos, el primero de tipo lista llamado <code>&quot;EquipoTipoTarifa&quot;</code> con valores validos <code>&quot;01&quot;</code>, <code>&quot;02&quot;</code> el cual es requerido.</p>
+<p>La segunda propiedad llamada <code>&quot;MiEquipoTipo&quot;</code> de tipo texto abierto, asi mismo requerido.</p>
+<pre><code class="lang-json">{
+    &quot;data&quot;: [
+        {
+            &quot;codProd&quot;: &quot;A-EE&quot;,
+            &quot;codPlan&quot;: &quot;001&quot;,
+            &quot;revPlan&quot;: &quot;001&quot;,
+            &quot;nombreMetodo&quot;: &quot;EquipoTipoTarifa&quot;,
+            &quot;descMetodo&quot;: &quot;Tipo de Equipo&quot;,
+            &quot;codMetodo&quot;: 371,
+            &quot;codRamo&quot;: &quot;EQEL&quot;,
+            &quot;numOrd&quot;: 1,
+            &quot;componente&quot;: [
+                {
+                    &quot;codMetodo&quot;: 371,
+                    &quot;codComponente&quot;: &quot;01&quot;,
+                    &quot;descComponente&quot;: &quot;Equipos Fijos&quot;,
+                    &quot;valComponente&quot;: &quot;2.1544&quot;,
+                    &quot;orden&quot;: 1,
+                    &quot;clave_Asoc&quot;: null,
+                    &quot;valCodTab&quot;: null,
+                    &quot;ideComponente&quot;: 3789,
+                    &quot;ideComponentePadre&quot;: null,
+                    &quot;msgError&quot;: null
+                },
+                {
+                    &quot;codMetodo&quot;: 371,
+                    &quot;codComponente&quot;: &quot;02&quot;,
+                    &quot;descComponente&quot;: &quot;Equipos Móviles y Portátiles&quot;,
+                    &quot;valComponente&quot;: &quot;6.0324&quot;,
+                    &quot;orden&quot;: 2,
+                    &quot;clave_Asoc&quot;: null,
+                    &quot;valCodTab&quot;: null,
+                    &quot;ideComponente&quot;: 3790,
+                    &quot;ideComponentePadre&quot;: null,
+                    &quot;msgError&quot;: null
+                }
+            ],
+            &quot;msgError&quot;: null,
+            &quot;metodoValidacion&quot;: null,
+            &quot;requerido&quot;: &quot;S&quot;
+        },
+        {
+            &quot;codProd&quot;: &quot;A-EE&quot;,
+            &quot;codPlan&quot;: &quot;001&quot;,
+            &quot;revPlan&quot;: &quot;001&quot;,
+            &quot;nombreMetodo&quot;: &quot;MiEquipoTipo&quot;,
+            &quot;descMetodo&quot;: &quot;Mi Equipo Tipo&quot;,
+            &quot;codMetodo&quot;: 392,
+            &quot;codRamo&quot;: &quot;EQEL&quot;,
+            &quot;numOrd&quot;: 2,
+            &quot;componente&quot;: [],
+            &quot;msgError&quot;: null,
+            &quot;metodoValidacion&quot;: null,
+            &quot;requerido&quot;: &quot;S&quot;
+        },
 }
 </code></pre>
-<h2 id="rogavi-umeris-tulisse">Rogavi umeris tulisse</h2>
-<p>Pictas leto vix novem nitidi mentem Phoeboque, inposuere incubat thalamo:
-mugitibus. Busto siquid adspexerit venerit <a href="http://mundiclivo.org/aliiinplevit">
-tenentibus</a> suo <a href="http://tamen.io/">habet ardet
-Troes</a>. Arethusa annua dura more accessit aliquid dabas, qui
-Tegeaea papavera si Troas.</p>
-<ul>
-<li>Vota ipsa in peremi</li>
-<li>Possent anhelatos</li>
-<li>Poena quem</li>
-<li>Nutrit super eodem</li>
-<li>Donis adhaesit requiemque petit Antaeo sustinet feram</li>
-</ul>
-<p>Studeat occupat viro talia truncas pectine redit crimina divum illud, precesque
-et Minos, quidquid gratia. Cremarat mutare advehar vultu longa meritus illos
-Bromiumque aquosae aevis te <a href="http://solioad.com/">modo</a> forma, legi robora: plus
-arbor latrator. Palluit in quanta mitte miluus; amantes hominesque imago, si
-Ianthe, unda. Acies in vulnere secum, forte, barba fumo solet ignibus; sanguine!</p>
-<pre><code>if (webcamSystem.modemPointClob(3) &lt; 14) {
-    yobibyteReimage = simplex_readme / 4 + responsive_server;
-} else {
-    big(thumbnailVirtual, data_primary_lamp);
+<h2 id="consulta-de-métodos-datos-particulares-de-emisión-por-producto">Consulta de Métodos (Datos Particulares de Emisión) por Producto.</h2>
+<h3 id="descripción-1">Descripción</h3>
+<p>Para conocer las propiedades (Métodos) que deben de ser enviadas al momento de crear una propuesta; se utiliza el endpoint <strong><em>{{baseUrl}}/api/Cotizador/GetDatosEmisionPropuestaConf?CodProd={{codprod}}</em></strong> de tipo <code>GET</code></p>
+<p>Este endpoint entrega la configuración del producto consultado indicando cuales son los métodos existentes, el tipo de método, si son o no obligatorios y en caso de ser de tipo lista las opciones validas y disponibles.</p>
+<h3 id="ejemplo-de-entrada-1">Ejemplo de entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codprod</td>
+<td>A-EE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-respuesta-1">Ejemplo de Respuesta</h3>
+<p>En el siguiente ejemplo se muestra la propiedad <code>&quot;ClienteNombreTarjetaCredito&quot;</code>
+de tipo string y no obligatoria, la propiedad <code>&quot;ClienteReferido&quot;</code> con valores validos <code>&quot;Si&quot;</code> u <code>&quot;No&quot;</code> no obligatorio.</p>
+<pre><code class="lang-json">{
+  &quot;data&quot;: [
+    {
+      &quot;codProd&quot;: &quot;A-EE&quot;,
+      &quot;codMetodo&quot;: 282,
+      &quot;requerido&quot;: &quot;N&quot;,
+      &quot;descMetodo&quot;: &quot;Nombre (Como aparece en la tarjeta)&quot;,
+      &quot;nombreMetodo&quot;: &quot;ClienteNombreTarjetaCredito&quot;,
+      &quot;componente&quot;: []
+    },
+    {
+      &quot;codProd&quot;: &quot;A-EE&quot;,
+      &quot;codMetodo&quot;: 285,
+      &quot;requerido&quot;: &quot;N&quot;,
+      &quot;descMetodo&quot;: &quot;Cliente Referido?&quot;,
+      &quot;nombreMetodo&quot;: &quot;ClienteReferido&quot;,
+      &quot;componente&quot;: [
+        {
+          &quot;codProd&quot;: &quot;A-EE&quot;,
+          &quot;codMetodo&quot;: 285,
+          &quot;codComponente&quot;: &quot;Si&quot;,
+          &quot;descComponente&quot;: &quot;Si&quot;,
+          &quot;valComponente&quot;: &quot;1&quot;,
+          &quot;indCobert&quot;: null,
+          &quot;orden&quot;: 1,
+          &quot;msgError&quot;: null,
+          &quot;ideComponente&quot;: 0,
+          &quot;ideComponentePadre&quot;: null,
+          &quot;descripcionMetodo&quot;: null,
+          &quot;nombreMetodo&quot;: null
+        },
+        {
+          &quot;codProd&quot;: &quot;A-EE&quot;,
+          &quot;codMetodo&quot;: 285,
+          &quot;codComponente&quot;: &quot;No&quot;,
+          &quot;descComponente&quot;: &quot;No&quot;,
+          &quot;valComponente&quot;: &quot;1&quot;,
+          &quot;indCobert&quot;: null,
+          &quot;orden&quot;: 2,
+          &quot;msgError&quot;: null,
+          &quot;ideComponente&quot;: 0,
+          &quot;ideComponentePadre&quot;: null,
+          &quot;descripcionMetodo&quot;: null,
+          &quot;nombreMetodo&quot;: null
+        }
+      ]
+    }
+  ]
 }
-kibibyte_protector_active += nocPackBridge + white;
-var firewall_socket_bus = up;
-module_carrier += webmail_source_hardware(us, metadata, radcab - 3) - 3;
-cpcPartitionLink *= sessionSoa / surface * systemHacker;
 </code></pre>
-<p>Nutantem spatiis, corruat memor in sed nate, auro, ora amissa fatidicus et.
-Manusque amore spectabat <a href="http://www.inposito-quam.io/quotquae.html">tyranni</a>
-ipsa <strong>Mimasque</strong>, et tum post parvo, dedit vires et aestus et Rhoetus! Incursu
-ferro tellusque tulit longa <strong>ungues</strong> oris magnis tamen tectus; fulmina urbs
-obscura ramis feliciter libido aut sensi? Vidi oenea puppibus amanti, pro
-foliis, hoc est amicitiae et! Caput favorem, inimica in spinae hoc simul
-stantibus pependit opesque pericula avorum paene.</p>
+<h2 id="crear-una-propuesta">Crear una propuesta</h2>
+<h3 id="descripción-2">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Cotizador/Propuesta</em></strong> de tipo <code>POST</code> permite crear propuesta dado un diccionario de clave valor de tipo string.</p>
+<p>Existen ciertas convenciones para fechas y beneficiarios, las fechas deben ser proporcionadas en el formato dd/MM/yyyy. Las cantidades deben ser delimitadas entre comillas dobles por ejemplo una propiedad SumaAsegurada con valor de 1000 debe ser enviada <code> {&quot;SumaAsegurada&quot;:&quot;1000&quot;}</code>.</p>
+<p>A su vez existen propiedades que deben de estar presentes en la petición las que se ejemplifican a continuación.</p>
+<h3 id="ejemplos-de-entrada">Ejemplos de entrada</h3>
+<pre><code class="lang-json">{
+  &quot;codProd&quot;: &quot;F-BD&quot;,
+  &quot;codPlan&quot;: &quot;001&quot;,
+  &quot;revPlan&quot;: &quot;001&quot;,
+  &quot;codRamo&quot;: &quot;VITR&quot;,
+  &quot;codMoneda&quot;: &quot;RD&quot;,
+  &quot;codUsr&quot;: &quot;externo112&quot;,
+  &quot;tipoPrima&quot;: &quot;LLAMATIVA&quot;,
+  &quot;tipoPropuesta&quot;: &quot;abc&quot;,
+  &quot;fecIniVigPropuesta&quot;: &quot;17/03/2023&quot;,
+  &quot;fecFinVigPropuesta&quot;: &quot;17/03/2024&quot;,
+  &quot;MostrarComo&quot;: null,
+  &quot;descripcionBienAsegurado&quot;: &quot; nombre descriptivo &quot;
+}
+</code></pre>
+<p>La propiedad <code>&quot;MostrarComo&quot;</code> tiene un valor por defecto <code>null</code>, al enviarse el string <code>&quot;Array&quot;</code> configura la propuesta como multibien debiendo enviarse la propiedad <code>&quot;bienesAsegurados&quot;</code> de tipo array tal como sigue</p>
+<pre><code class="lang-json">{
+//...
+    &quot;MostrarComo&quot;: &quot;Array&quot;,
+    &quot;bienesAsegurados&quot;: [
+    {
+     //...
+        &quot;AnioFabricacion&quot;: &quot;2023&quot;,
+        &quot;descripcionBienAsegurado&quot;: &quot;Cámara&quot;,
+        &quot;DescripcionObjetoAsegurado&quot;: &quot;Cámara&quot;,
+     //...
+    }
+}
+</code></pre>
+<p>Cada entrada de la propiedad bienes asegurados debe ser un objeto que contenga el nombre de la propiedad (Método) del objeto asegurado en cuestión.</p>
+<p>Si el producto contempla beneficiarios es necesario enviar la propiedad beneficiarios de tipo array en el cuerpo principal de la petición.</p>
+<pre><code class="lang-json">{
+  //...
+  &quot;beneficiarios&quot;: [
+    {
+      &quot;numOa&quot;: 1,
+      &quot;beneficiarioNombreCompleto&quot;: &quot;DARITZA CAROLINA MATOS DE LOS SANTOS&quot;,
+      &quot;beneficiarioTipoIdentificacion&quot;: &quot;Cédula&quot;,
+      &quot;beneficiarioNumeroIdentificacion&quot;: &quot;___-_______-_&quot;,
+      &quot;beneficiarioPorcentaje&quot;: 100,
+      &quot;beneficiarioRelacion&quot;: &quot;Otra relación&quot;,
+      &quot;beneficiarioFechaDeNacimiento&quot;: &quot;29/05/1976&quot;,
+      &quot;numBen&quot;: 1
+    }
+  ]
+  //...
+}
+</code></pre>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Cotizador/Propuesta</em></strong> de tipo <code>POST</code> devuelve las mismas informaciones enviadas en la petición adicionando el <code>ideprop</code> Generado y las informaciones de <code>primaAnual</code> <code>primaAnualSinImpuestos</code> <code>iscAnual</code> <code>impuestoAnual</code></p>
+<h2 id="obtener-propuesta">Obtener Propuesta</h2>
+<h3 id="descripción-3">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Cotizador/Propuesta/{{ideprop}}</em></strong> de tipo <code>GET</code> devuelve un diccionario del tipo propuesta dado un <code>ideProp</code></p>
+<h3 id="ejemplo-de-entrada-2">Ejemplo de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ideprop</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-respuestas">Ejemplo de Respuestas</h3>
+<p>Devuel un objeto del tipo Propuesta</p>
+<pre><code class="lang-json">{
+  &quot;ideProp&quot;: &quot;1&quot;,
+  &quot;codProd&quot;: &quot;F-BD&quot;,
+  &quot;codPlan&quot;: &quot;001&quot;,
+  &quot;revPlan&quot;: &quot;001&quot;,
+  &quot;codRamo&quot;: &quot;VITR&quot;,
+  &quot;codMoneda&quot;: &quot;RD&quot;,
+  &quot;codUsr&quot;: &quot;externo112&quot;,
+  &quot;tipoPrima&quot;: &quot;LLAMATIVA&quot;,
+  &quot;tipoPropuesta&quot;: &quot;abc&quot;,
+  &quot;fecIniVigPropuesta&quot;: &quot;17/03/2023&quot;,
+  &quot;fecFinVigPropuesta&quot;: &quot;17/03/2024&quot;,
+  &quot;MostrarComo&quot;: null,
+  &quot;descripcionBienAsegurado&quot;: &quot; nombre descriptivo &quot;,
+  &quot;beneficiarios&quot;: [
+    {
+      &quot;numOa&quot;: 1,
+      &quot;beneficiarioNombreCompleto&quot;: &quot;DARITZA CAROLINA MATOS DE LOS SANTOS&quot;,
+      &quot;beneficiarioTipoIdentificacion&quot;: &quot;Cédula&quot;,
+      &quot;beneficiarioNumeroIdentificacion&quot;: &quot;___-_______-_&quot;,
+      &quot;beneficiarioPorcentaje&quot;: 100,
+      &quot;beneficiarioRelacion&quot;: &quot;Otra relación&quot;,
+      &quot;beneficiarioFechaDeNacimiento&quot;: &quot;29/05/1976&quot;,
+      &quot;numBen&quot;: 1
+    }
+  ]
+  //...
+}
+</code></pre>
+<p>Si la propuesta fue configurada como multibien al momento de ser creada, las descripciones de los bienes asegurados se devolverá con la propiedad <code>bienesAsegurados</code></p>
+<pre><code class="lang-json">{
+    //...
+    &quot;MostrarComo&quot;: &quot;Array&quot;,
+    &quot;bienesAsegurados&quot;: [
+    {
+     //...
+        &quot;AnioFabricacion&quot;: &quot;2023&quot;,
+        &quot;descripcionBienAsegurado&quot;: &quot;Cámara&quot;,
+        &quot;DescripcionObjetoAsegurado&quot;: &quot;Cámara&quot;,
+     //...
+    }
+    //...
+}
+</code></pre>
+<h2 id="modificar-una-propuesta">Modificar una propuesta</h2>
+<h3 id="descripción-4">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Cotizador/Propuesta/{{ideprop}}</em></strong> de tipo <code>PUT</code> recibe y devuelve una propuesta en el formato otorgado por el endpoint <strong><em>{{baseUrl}}/api/Cotizador/Propuesta/{{ideprop}}</em></strong> de tipo get <code>GET</code></p>
+<h2 id="actualizar-datos-de-emisión">Actualizar datos de emisión</h2>
+<h3 id="descripción-5">Descripción</h3>
+<p>El enpoint de tipo <strong><em>{{baseUrl}}/api/ropuesta/{ideprop}/DatosEmision</em></strong> de tipo <code>PUT</code> recibe un diccionario de tipo <code>string -&gt; string</code> que contiene las propiedades y sus respectivos valores a editar, su utilidad radica en que la alteración de estas propiedades tiene una tiempo de ejecución más corto al no ser necesario realizar computos de prima, fraccionamiento ni impuestos.</p>
+<h3 id="ejemplo-de-entrada-3">Ejemplo de Entrada</h3>
+<pre><code class="lang-json">{
+  &quot;ClienteGenero&quot;: &quot;Hombre&quot;,
+  &quot;ClienteNombre&quot;: &quot;Juan&quot;,
+  &quot;ClienteApellido&quot;: &quot;Lopez&quot;,
+  &quot;ClienteDireccion&quot;: &quot;Calle ... Colonia ... Ciudad de ....&quot;
+}
+</code></pre>
+<h2 id="emitir-una-propuesta">Emitir una propuesta</h2>
+<h3 id="descripción-6">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Procesar/PagoEmision</em></strong> de tipo <code>POST</code> que recibe un objeto con la forma</p>
+<h3 id="ejemplo-de-entrada-4">Ejemplo de Entrada</h3>
+<pre><code class="lang-json">{
+  &quot;ideProp&quot;: 52624531,
+  &quot;autorizacion&quot;: &quot;1234Ok&quot;,
+  &quot;monto&quot;: 10000,
+  &quot;datosTarjeta&quot;: &quot;************9036&quot;,
+  &quot;codigoReferidor&quot;: &quot;REF-2023xx&quot;,
+  &quot;tipDoc&quot;: &quot;EMI&quot;
+}
+</code></pre>
+<h2 id="emitir-un-certificado">Emitir un Certificado</h2>
+<h3 id="descripción-7">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/poliza/emitircertificado</em></strong> de tipo <code>POST</code> permite emitir la propuesta indicada en ideprop como un certificado de la poliza con idepol indicado.</p>
+<h3 id="ejemplo-de-entrada-5">Ejemplo de Entrada</h3>
+<pre><code class="lang-json">{
+  &quot;idepol&quot;: 520,
+  &quot;ideprop&quot;: 1674
+}
+</code></pre>
+<p>Idepol representa la póliza de destino del certificado e ideprop el número de la propuesta que se convertirá en el nuevo certificado.</p>
+<h3 id="ejemplo-de-respuesta-2">Ejemplo de Respuesta</h3>
+<p>Retorna las informaciones de la póliza emitida asi como de la factura generada.</p>
+<pre><code class="lang-json">{
+  &quot;IdePol&quot;: 0,
+  &quot;NoPoliza&quot;: &quot;&quot;,
+  &quot;Errores&quot;: &quot;&quot;,
+  &quot;MsgError&quot;: &quot;&quot;,
+  &quot;NumOper&quot;: &quot;&quot;,
+  &quot;CodCli&quot;: &quot;&quot;,
+  &quot;IdeFact&quot;: 0,
+  &quot;DetalleFactura&quot;: {
+    &quot;Comprobante&quot;: &quot;&quot;,
+    &quot;InicioVigencia&quot;: &quot;2023-01-24T01:55:54.080Z&quot;,
+    &quot;FinVigencia&quot;: &quot;2023-01-24T01:55:54.080Z&quot;,
+    &quot;IdFactura&quot;: 0,
+    &quot;Identificacion&quot;: &quot;&quot;,
+    &quot;TipoId&quot;: &quot;&quot;,
+    &quot;Direccion&quot;: &quot;&quot;,
+    &quot;NoPoliza&quot;: &quot;&quot;,
+    &quot;Impuesto&quot;: 0.0,
+    &quot;PctImp&quot;: 0.0,
+    &quot;PrimaTotal&quot;: 0.0,
+    &quot;Nombre&quot;: &quot;&quot;,
+    &quot;PrimaNeta&quot;: 0.0,
+    &quot;SumaAsegurada&quot;: 0.0,
+    &quot;Descripcion&quot;: &quot;&quot;,
+    &quot;NCF&quot;: &quot;&quot;,
+    &quot;CodProd&quot;: &quot;&quot;,
+    &quot;Email&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h2 id="pago-recurrente">Pago recurrente</h2>
+<h3 id="descripción-8">Descripción</h3>
+<p>El endpoint de tipo <code>POST</code> <strong><em>{{baseUrl}}/api/Procesar/{{codprod}}-{{numPol}}/PagoFacturacion</em></strong> recibe un objeto en el formato.</p>
+<h3 id="ejemplo-de-entrada-6">Ejemplo de entrada</h3>
+<pre><code class="lang-json">{
+  &quot;autorizacion&quot;: &quot;111111&quot;,
+  &quot;monto&quot;: 829.57,
+  &quot;TipoPago&quot;: &quot;M&quot;
+}
+</code></pre>
+<p>Procesando el pago para una póliza dada retornando una respeta del tipo.</p>
+<h3 id="ejemplo-de-respuesta-3">Ejemplo de Respuesta</h3>
+<pre><code class="lang-json">{
+  &quot;data&quot;: {
+    &quot;Comprobante&quot;: &quot;&quot;,
+    &quot;InicioVigencia&quot;: &quot;2023-01-24T01:55:54.080Z&quot;,
+    &quot;FinVigencia&quot;: &quot;2023-01-24T01:55:54.080Z&quot;,
+    &quot;IdFactura&quot;: 0,
+    &quot;Identificacion&quot;: &quot;&quot;,
+    &quot;TipoId&quot;: &quot;&quot;,
+    &quot;Direccion&quot;: &quot;&quot;,
+    &quot;NoPoliza&quot;: &quot;&quot;,
+    &quot;Impuesto&quot;: 0.0,
+    &quot;PctImp&quot;: 0.0,
+    &quot;PrimaTotal&quot;: 0.0,
+    &quot;Nombre&quot;: &quot;&quot;,
+    &quot;PrimaNeta&quot;: 0.0,
+    &quot;SumaAsegurada&quot;: 0.0,
+    &quot;Descripcion&quot;: &quot;&quot;,
+    &quot;NCF&quot;: &quot;&quot;,
+    &quot;CodProd&quot;: &quot;&quot;,
+    &quot;Email&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h2 id="cancelar-póliza">Cancelar Póliza</h2>
+<h3 id="descripción-9">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/poliza/{codprod}-{numpol}/cancelar</em></strong> de tipo <code>POST</code> recibe un objeto del tipo.</p>
+<h3 id="ejemplo-de-entrada-7">Ejemplo de entrada</h3>
+<pre><code class="lang-json">{
+  &quot;fechaCancelacion&quot;: &quot;2023-03-07&quot;,
+  &quot;motivoCancelacion&quot;: &quot;01&quot;,
+  &quot;tipoAnulacion&quot;: &quot;P&quot;,
+  &quot;indDevPrima&quot;: &quot;S&quot;,
+  &quot;DescripcionesMotvAnul&quot;: &quot;El producto no cumple con mis expectativas&quot;
+}
+</code></pre>
+<p>Con las información relativas a la cancelación, el parámetro <code>motivoCancelacion</code>, <code>tipoAnulacion</code> y <code>indDevPrima</code> recibe los siguientes valores.</p>
+<h3 id="motivos-de-cancelación">Motivos de Cancelación</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>POR FALTA DE PAGO</td>
+</tr>
+<tr>
+<td>02</td>
+<td>CANCELACIÓN POR DECISIÓN DE UNIT</td>
+</tr>
+<tr>
+<td>03</td>
+<td>CANCELACIÓN POR SINIESTRO</td>
+</tr>
+<tr>
+<td>04</td>
+<td>SUSTITUCIÓN COBERTURA ACTUAL</td>
+</tr>
+<tr>
+<td>05</td>
+<td>EL PRODUCTO NO CUMPLE CON MIS EXPECTATIVAS</td>
+</tr>
+<tr>
+<td>06</td>
+<td>TUVE UNA MALA EXPERIENCIA / MAL SERVICIO AL CLIENTE</td>
+</tr>
+<tr>
+<td>07</td>
+<td>ENCONTRÉ UNA MEJOR ALTERNATIVA</td>
+</tr>
+<tr>
+<td>08</td>
+<td>YA NO PUEDO SEGUIR PAGANDO LA PRIMA</td>
+</tr>
+<tr>
+<td>09</td>
+<td>SUSTITUÍ MI COBERTURA POR OTRA COBERTURA DE UNIT</td>
+</tr>
+<tr>
+<td>10</td>
+<td>VENDÍ MI PRODUCTO</td>
+</tr>
+<tr>
+<td>11</td>
+<td>PRUEBA REALIZADA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipos-de-anulación">Tipos de Anulación</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>Prorrata</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Corto Plazo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="indicador-devuelve-prima">Indicador Devuelve Prima</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>Devuelve Prima</td>
+</tr>
+<tr>
+<td>N</td>
+<td>No Devuelve Prima</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-respuesta-4">Ejemplo de Respuesta</h3>
+<p>Devuelve un objeto del tipo.</p>
+<pre><code class="lang-json">{
+  &quot;data&quot;: &quot;resultado&quot;
+}
+</code></pre>
+<h2 id="programar-cancelación">Programar Cancelación</h2>
+<h3 id="descripción-10">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/poliza/{{codprod}}-{{numpol}}/ProgramarCancelacion</em></strong> de tipo <code>POST</code> recibe un objeto del tipo</p>
+<h3 id="ejemplo-de-entrada-8">Ejemplo de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codprod</td>
+<td>A-EE</td>
+</tr>
+<tr>
+<td>numpol</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-json">{
+  &quot;fechaCancelacion&quot;: &quot;2023-01-24T01:55:54.080Z&quot;,
+  &quot;motivoCancelacion&quot;: &quot;04&quot;,
+  &quot;descripcionesMotvAnul&quot;: &quot;falta de pago en tiempo....&quot;
+}
+</code></pre>
+<h3 id="ejemplo-de-salida">Ejemplo de Salida</h3>
+<p>Devuelve un objeto del tipo.</p>
+<pre><code class="lang-json">{
+  &quot;data&quot;: &quot;resultado&quot;
+}
+</code></pre>
+<h2 id="buscar-póliza">Buscar Póliza</h2>
+<p>El endpoint <strong><em>{{baseUrl}}/api/poliza?noPoliza={{codprod}}-{{numpol}}</em></strong> de tipo <code>GET</code> devuelve una Póliza en el formato de propuesta, incluyendo datos particulares,
+datos de emision, prima valor del impuesto.</p>
+<h3 id="ejemplo-de-entrada-9">Ejemplo de entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codprod</td>
+<td>A-EE</td>
+</tr>
+<tr>
+<td>numpol</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="buscar-factura">Buscar Factura</h2>
+<h3 id="descripción-11">Descripción</h3>
+<p>El endpoint {{baseUrl}}/api/Poliza/{{noPoliza}}/Factura?idFactura={{idefact}} de tipo <code>GET</code> permite buscar la ultima factura dado el numero de poliza o una factura exact dado el idFactura.</p>
+<h3 id="ejemplo-de-entrada-10">Ejemplo de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>noPoliza</td>
+<td>A-EE-10</td>
+</tr>
+<tr>
+<td>idefact</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-salida-1">Ejemplo de Salida</h3>
+<pre><code class="lang-json">{
+  &quot;msgError&quot;: &quot;string&quot;,
+  &quot;hasError&quot;: true,
+  &quot;data&quot;: {
+    &quot;comprobante&quot;: &quot;string&quot;,
+    &quot;inicioVigencia&quot;: &quot;2023-04-13T06:37:01.128Z&quot;,
+    &quot;finVigencia&quot;: &quot;2023-04-13T06:37:01.128Z&quot;,
+    &quot;idFactura&quot;: 22,
+    &quot;identificacion&quot;: &quot;string&quot;,
+    &quot;tipoId&quot;: &quot;string&quot;,
+    &quot;direccion&quot;: &quot;string&quot;,
+    &quot;noPoliza&quot;: &quot;string&quot;,
+    &quot;impuesto&quot;: 0,
+    &quot;pctImp&quot;: 0,
+    &quot;primaTotal&quot;: 0,
+    &quot;nombre&quot;: &quot;string&quot;,
+    &quot;primaNeta&quot;: 0,
+    &quot;sumaAsegurada&quot;: 0,
+    &quot;descripcion&quot;: &quot;string&quot;,
+    &quot;ncf&quot;: &quot;string&quot;,
+    &quot;codProd&quot;: &quot;string&quot;,
+    &quot;email&quot;: &quot;string&quot;
+  }
+}
+</code></pre>
+<h2 id="buscar-póliza-btb">Buscar Póliza Btb</h2>
+<h3 id="descripción-12">Descripción</h3>
+<p>El endpoint {{baseUrl}}/api/Poliza/{{noPoliza}}/FacturaBtb?idFactura={{idefact}} de tipo <code>GET</code> permite buscar la ultima factura dado el numero de poliza o una factura exact dado el idFactura.</p>
+<h3 id="ejemplo-de-entrada-11">Ejemplo de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>noPoliza</td>
+<td>A-EE-10</td>
+</tr>
+<tr>
+<td>idefact</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p>Devuelve una respuesta del tipo</p>
+<pre><code class="lang-json">{
+  &quot;msgError&quot;: &quot;string&quot;,
+  &quot;hasError&quot;: true,
+  &quot;data&quot;: {
+    &quot;idePol&quot;: 0,
+    &quot;rnc&quot;: &quot;string&quot;,
+    &quot;noPoliza&quot;: &quot;string&quot;,
+    &quot;nombreCliente&quot;: &quot;string&quot;,
+    &quot;inicioFactura&quot;: &quot;2023-04-13T06:35:40.493Z&quot;,
+    &quot;finFactura&quot;: &quot;2023-04-13T06:35:40.493Z&quot;,
+    &quot;comprobanteFiscal&quot;: &quot;string&quot;,
+    &quot;direccionDeLaEmpresa&quot;: &quot;string&quot;,
+    &quot;finComprobanteFiscal&quot;: &quot;2023-04-13T06:35:40.493Z&quot;,
+    &quot;provincia&quot;: &quot;string&quot;,
+    &quot;municipio&quot;: &quot;string&quot;,
+    &quot;sector&quot;: &quot;string&quot;,
+    &quot;ideOpe&quot;: 0,
+    &quot;certificados&quot;: [
+      {
+        &quot;certificado&quot;: &quot;string&quot;,
+        &quot;nombreAsegurado&quot;: &quot;string&quot;,
+        &quot;sumaAsegurada&quot;: 0,
+        &quot;prima&quot;: 0,
+        &quot;impuestos&quot;: 0,
+        &quot;pctImp&quot;: 0
+      }
+    ],
+    &quot;subtotal&quot;: 0,
+    &quot;totalImpuestos&quot;: 0,
+    &quot;total&quot;: 0,
+    &quot;ideFact&quot;: 22,
+    &quot;numFact&quot;: 0
+  }
+}
+</code></pre>
+<h2 id="endosar-póliza">Endosar Póliza</h2>
+<h3 id="descripción-13">Descripción</h3>
+<p>El endpoint <strong><em>{{baseUrl}}/api/Poliza/{{noPoliza}}/Endoso</em></strong> de tipo <code>POST</code> permite modifcar los datos de emision y particulares de una poliza ya emitida al enviarse un diccionario de clave valore como el ejemplo que sigue, donde cada propiedad representa una dato particular o de emisión en su caso.</p>
+<h3 id="ejemplo-de-entrada-12">Ejemplo de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>noPoliza</td>
+<td>A-EE-10</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-json">{
+  &quot;codMoneda&quot;: &quot;RD&quot;,
+  &quot;codUsr&quot;: &quot;externo112&quot;,
+  &quot;tipoPrima&quot;: &quot;LLAMATIVA&quot;,
+  &quot;tipoPropuesta&quot;: &quot;UNIVERSAL&quot;,
+  &quot;msgError&quot;: null,
+  &quot;fecFinVigPropuesta&quot;: &quot;01/10/2023&quot;,
+  &quot;fecIniVigPropuesta&quot;: &quot;01/10/2022&quot;,
+  &quot;canal&quot;: &quot;Servicio Cliente&quot;,
+  &quot;codEndoso&quot;: &quot;001&quot;,
+  &quot;beneficiarios&quot;: [
+    {
+      &quot;beneficiarioNombreCompleto&quot;: &quot;Beneficiario de prueba&quot;,
+      &quot;beneficiarioTipoIdentificacion&quot;: &quot;D&quot;,
+      &quot;beneficiarioNumeroIdentificacion&quot;: &quot;00000000000&quot;,
+      &quot;beneficiarioPorcentaje&quot;: &quot;100&quot;,
+      &quot;beneficiarioRelacion&quot;: &quot;Hijo / Hija&quot;,
+      &quot;beneficiarioFechaDeNacimiento&quot;: &quot;10/10/1991&quot;
+    }
+  ],
+  &quot;FraccionamientoPago&quot;: &quot;A&quot;,
+  &quot;Iniciodevigencia&quot;: &quot;01/07/2022&quot;,
+  &quot;FindeVigencia&quot;: &quot;17/12/2023&quot;,
+  &quot;ClienteNombreTarjetaCredito&quot;: &quot;BYRON DE JESUS&quot;,
+  &quot;ClienteApellidoTarjetaCredito&quot;: &quot;RAMOS P&quot;,
+  &quot;ClienteReferido&quot;: &quot;No&quot;,
+  &quot;ClienteReferidoDesc&quot;: &quot;01&quot;,
+  &quot;ClienteConfirmacionNacimiento&quot;: &quot;1993&quot;,
+  &quot;ClienteDomicilioCalle&quot;: &quot;3RA&quot;,
+  &quot;ClienteRNCRequerido&quot;: &quot;No&quot;,
+  &quot;ClienteCorreo&quot;: &quot;BYRONJESUS1993@GMAIL.COM&quot;,
+  &quot;ClienteDomicilioEdificio&quot;: &quot;0-39&quot;,
+  &quot;ClienteNombres&quot;: &quot;BYRON DE JESUS&quot;,
+  &quot;ClienteApellidos&quot;: &quot;RAMOS PORTILLO&quot;,
+  &quot;ClienteDomicilioProvincia&quot;: &quot;JALAPA&quot;,
+  &quot;ClienteDomicilioMunicipio&quot;: &quot;JALAPA&quot;,
+  &quot;ClienteDomicilioCiudad&quot;: &quot;JALAPA&quot;,
+  &quot;ClienteDomicilioSector&quot;: &quot;LA ESPERANZA&quot;,
+  &quot;ClienteApellidoPaterno&quot;: &quot;RAMOS&quot;,
+  &quot;ClienteApellidoMaterno&quot;: &quot;PORTILLO&quot;,
+  &quot;ClienteGenero&quot;: &quot;Hombre&quot;,
+  &quot;ClienteTelefono&quot;: &quot;+50240134257&quot;,
+  &quot;Pep&quot;: &quot;Si&quot;,
+  &quot;PepClienteCargo&quot;: null,
+  &quot;PepOtroCargo&quot;: null,
+  &quot;PepOtroRelacion&quot;: null,
+  &quot;ClienteCedula&quot;: &quot;00112762448&quot;,
+  &quot;pago_IPPID&quot;: null,
+  &quot;pago_FormaPagoID&quot;: null,
+  &quot;pago_ResultadoID&quot;: null,
+  &quot;pago_ResultadoMensaje&quot;: null,
+  &quot;Pago_Estatus&quot;: null,
+  &quot;pago_AutorizacionID&quot;: null,
+  &quot;EndosoCesion&quot;: &quot;No&quot;,
+  &quot;IF_RNC&quot;: null,
+  &quot;IF_NombreEjecutivo&quot;: null,
+  &quot;InstitucionFinanciera&quot;: null,
+  &quot;IF_EmailEjecutivo&quot;: null,
+  &quot;IF_NumeroEjecutivo&quot;: null,
+  &quot;CompaniaCorretaje&quot;: null,
+  &quot;VendedorID&quot;: null,
+  &quot;AgenteIdentificacion&quot;: null,
+  &quot;NombreInstitucion&quot;: null,
+  &quot;AgenteNombre1&quot;: null,
+  &quot;AgenteNombre2&quot;: null,
+  &quot;AgenteTelefono&quot;: null,
+  &quot;AgenteCorreo&quot;: null,
+  &quot;AgenteRNCRequerido&quot;: null,
+  &quot;AgenteDomicilioCalle&quot;: null,
+  &quot;AgenteDomicilioEdificio&quot;: null,
+  &quot;AgenteDomicilioSector&quot;: null,
+  &quot;AgenteDomicilioMunicipio&quot;: null,
+  &quot;AgenteDomicilioProvincia&quot;: null,
+  &quot;SitePortal&quot;: null,
+  &quot;FechaNacimiento2&quot;: &quot;14/09/1993&quot;,
+  &quot;pago_ReservaID&quot;: &quot;texto libre&quot;,
+  &quot;ClientePasaporte&quot;: &quot;texto libre&quot;,
+  &quot;DocumentoTipo&quot;: &quot;texto libre&quot;,
+  &quot;Discount&quot;: &quot;texto libre&quot;,
+  &quot;DiscountType&quot;: &quot;texto libre&quot;,
+  &quot;codProd&quot;: &quot;F-AP&quot;,
+  &quot;codPlan&quot;: &quot;001&quot;,
+  &quot;revPlan&quot;: &quot;001&quot;,
+  &quot;numPol&quot;: &quot;34&quot;,
+  &quot;idePol&quot;: &quot;414&quot;,
+  &quot;codPol&quot;: &quot;F-AP&quot;,
+  &quot;stsPol&quot;: &quot;ACT&quot;,
+  &quot;fecFinVig&quot;: &quot;17/12/2023 00:00:00&quot;,
+  &quot;Findevigencia&quot;: &quot;17/12/2023&quot;,
+  &quot;fecIniVig&quot;: &quot;1/07/2022 00:00:00&quot;,
+  &quot;codOfiSusc&quot;: &quot;SWEB&quot;,
+  &quot;fechaCancelacion&quot;: null,
+  &quot;motivoCancelacion&quot;: null,
+  &quot;tipoAnulacion&quot;: null,
+  &quot;descripcionesMotvAnul&quot;: null
+}
+</code></pre>
 </article>
           </div>
           
@@ -168,9 +859,6 @@ stantibus pependit opesque pericula avorum paene.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ovasquez/docfx-material/blob/master/docs/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -189,7 +877,7 @@ stantibus pependit opesque pericula avorum paene.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2019 Oscar Vasquez<br>Generated with <strong>DocFX</strong></span>
+            <div style='display:flex;justify-content: space-around;'><img style='width: 10rem;' src='/images/deerviewlogo.jpg'><span>Copyright © 2023 DeewView</span></div>
             
           </div>
         </div>
